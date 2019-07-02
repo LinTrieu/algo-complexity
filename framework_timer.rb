@@ -1,7 +1,17 @@
 # require_relative 'reverse.rb'
 
-# Arrays of varying size 5k - 100k
-
+# Measure the execution time of last, reverse, shuffle, sort
+def time_elapsed(arr)
+  start_time = Time.now
+  # -----------------
+  arr.shuffle
+  # -----------------
+  end_time = Time.now
+  time_taken = end_time - start_time
+  puts time_taken
+  end
+    
+# Creates arrays of differing size (between 5k - 100k)
 n = 0
 arr1 = Array.new(n += 5000) { rand(1..9) }
 arr2 = Array.new(n += 5000) { rand(1..9) }
@@ -23,17 +33,6 @@ arr17 = Array.new(n += 5000) { rand(1..9) }
 arr18 = Array.new(n += 5000) { rand(1..9) }
 arr19 = Array.new(n += 5000) { rand(1..9) }
 arr20 = Array.new(n += 5000) { rand(1..9) }
-
-# Measure the execution time of last, reverse, shuffle, sort
-def time_elapsed(arr)
-start_time = Time.now
-# -----------------
-arr.shuffle
-# -----------------
-end_time = Time.now
-time_taken = end_time - start_time
-puts time_taken
-end
 
 time_elapsed(arr1)
 time_elapsed(arr2)
