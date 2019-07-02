@@ -1,3 +1,4 @@
+# Implement your own algorithm for shuffling
 # require_relative 'reverse.rb'
 
 arr1 = ["cat", "dof"]

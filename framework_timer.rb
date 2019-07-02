@@ -4,7 +4,7 @@
 def time_elapsed(arr)
   start_time = Time.now
   # -----------------
-  arr.shuffle
+  arr.reverse
   # -----------------
   end_time = Time.now
   time_taken = end_time - start_time
